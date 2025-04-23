@@ -1,0 +1,158 @@
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Estilo da barra de navegação*/
+.navbar {
+    display: flex;
+    justify-content:space-between; /* Centraliza os itens */
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    background-color: #673ab7;
+    position: fixed; /* Mantém no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.navbar .inicio{
+    background-color: #7bc043;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;/*deixa a fonte mais grossa*/
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.navbar .inicio:hover{
+    background-color: #5a9f37;
+}
+
+/* Container onde o jogo e as instruções ficam */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 120px; /* Aumentado de 20px para 120px */
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Estilo das instruções */
+.caixadeinstrucao {
+    width: 300px;
+    background-color: #673ab7;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do canvas do jogo */
+#gameCanvas {
+    border: 2px solid #000;
+    background-color: #ffffff;
+    display: block;
+    margin-right: 20px;
+}
+
+/* Estilo da caixa de "Game Over" */
+.game-over {
+    background-color: #ff6f61;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Inicialmente invisível */
+    text-align: center;
+}
+
+/* Estilo da caixa de "Parabéns" */
+.parabens {
+    background-color: #4caf50;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Inicialmente invisível */
+    text-align: center;
+}
+
+/* Estilo dos botões */
+.bottom-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Botão Iniciar Jogo */
+.verde {
+    background-color: #4caf50;
+    color: white;
+}
+
+.verde:hover {
+    background-color: #45a049;
+}
+
+/* Estilo da linha de limite */
+canvas {
+    margin-top: 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;}
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caixadeinstrucao {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #gameCanvas {
+        margin-right: 0;
+    }
+
+    .bottom-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}

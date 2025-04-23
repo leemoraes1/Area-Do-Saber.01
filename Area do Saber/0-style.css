@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "Ravenwood";
+    src: url("fonts/Ravenwood-g5JR.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Ravenwood";
+    src: url("fonts/RavenwoodItalic-oO60.ttf") format("truetype");
+    font-style: italic;
+  }
+  
+  body {
+    /*background-image: url("img/fundo.jpeg"); /* ou .png */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #dfc450;
+    font-size: 20px;
+    color: #4a2600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  body::after {
+    content: "";
+    background-image: url("img/confetes.png");
+    background-repeat: repeat;
+    background-size: 120px;
+    opacity: 0.1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    z-index: 0;
+  }
+  
+  .nav-bar {
+    background-color: #6422b8;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 40px;
+    margin-right: 20px;
+  }
+  
+  .menu a {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #inicio { background-color: #85c56a; }
+  #pcd { background-color: #ef7f74; }
+  #amiguinho { background-color: #fecd1a; }
+  
+  .menu a:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+  
+  .container-jogos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 120px auto 60px;
+    padding: 0 20px;
+    z-index: 1;
+  }
+  
+  .bem-vindo {
+    margin: 20px 0;
+    background-color: #5e17eb;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .bem-vindo h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .bem-vindo p {
+    font-size: 18px;
+  }
+  
+  /* Área dos Jogos */
+  .area-Jogos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    flex: 1;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .area-Jogos a img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .area-Jogos a img:hover {
+    transform: scale(1.07);
+  }
+  
+  /* Última imagem maior e centralizada na linha de baixo */
+  .area-Jogos a:last-child {
+    grid-column: 2 / span 2;
+  }
+  
+  .area-Jogos a:last-child img {
+    width: 200px;
+    height: 200px;
+  }
+  

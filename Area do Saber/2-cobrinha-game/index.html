@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo da Cobrinha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="http://127.0.0.1:3002/Area do Saber/0-index.html" class="inicio">INÍCIO</a>
+  </div>
+
+  <h1 class="titulo">Jogo da Cobrinha</h1>
+
+  <div class="container">
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+    <div class="caixadeinstrucao">
+      <h3>Como jogar</h3>
+      <p>Use as setas do teclado para mover a cobrinha.</p>
+      <div class="bottom-buttons">
+        <button class="verde" onclick="startGame()">Iniciar Jogo</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-over" id="gameOver">Tente Novamente! 😢</div>
+  <div class="parabens" id="parabens">Parabéns! 🎉</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

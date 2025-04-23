@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jogo 2048</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="navbar">
+    <a href="http://127.0.0.1:3002/Area do Saber/0-index.html" class="inicio">INÍCIO</a>
+  </div>
+
+  <div class="container">
+    <div class="caixadeinstrucao">
+      <h2>Instruções do Jogo</h2>
+      <p>
+        Combine números iguais para formar blocos maiores.<br><br>
+        Use as setas do teclado ou deslize para mover os blocos.<br><br>
+        Chegue ao 2048 para vencer!<br><br>
+        O jogo termina se não houver mais movimentos.<br><br>
+        <strong>Dica:</strong> Mantenha o maior número em um canto!
+      </p>
+    </div>
+
+    <div class="game-container">
+      <canvas id="gameCanvas" width="300" height="404"></canvas>
+      <div id="mensagemJogo" class="mensagem"></div>
+      <div class="bottom-buttons">
+        <button class="verde" id="reiniciarBtn">Reiniciar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
